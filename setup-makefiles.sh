@@ -44,8 +44,16 @@ write_headers
 
 write_makefiles "$MY_DIR"/proprietary-files.txt true
 
-cat << EOF >> "$ANDROIDMK"
+cat << EOF >> "${ANDROIDMK}"
 
+\$(shell mkdir -p \$(TARGET_OUT_VENDOR)/lib/egl && pushd \$(TARGET_OUT_VENDOR)/lib > /dev/null && ln -s egl/libGLESv2_adreno.so libGLESv2_adreno.so && popd > /dev/null)
+
+EOF
+
+cat << EOF >> "$BOARDMK"
+ifeq (\$(WITH_TWRP),true)
+TARGET_RECOVERY_DEVICE_DIRS += vendor/$VENDOR/$DEVICE/proprietary
+endif
 EOF
 
 # Finish
