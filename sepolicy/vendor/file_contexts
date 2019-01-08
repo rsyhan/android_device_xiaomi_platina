@@ -31,9 +31,6 @@
 /data/decrypt\.txt                                  u:object_r:decrypt_file:s0
 /data/thermal(/.*)?                                 u:object_r:thermal_data_file:s0
 
-# DT2W
-/proc/touchpanel/wake_gesture                       u:object_r:sysfs_tap_to_wake:s0
-
 # Vibrator
 /sys/devices/virtual/timed_output/vibrator/vmax_mv            u:object_r:sysfs_vibrator:s0
 
