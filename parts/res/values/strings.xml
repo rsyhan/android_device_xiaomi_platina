@@ -1,0 +1,55 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+<!-- Ambient Display -->
+<string name="ambient_display_title">Ambient display</string>
+<string name="ambient_display_title_summary">Configure your Ambient display</string>
+
+<!-- categories -->
+<string name="category_system">System</string>
+<string name="category_display">Display</string>
+<string name="category_kernel">Kernel</string>
+<string name="category_s2s">Sweep2Sleep</string>
+
+<!-- KCAL -->
+<string name="kcal_title">Display color</string>
+<string name="kcal_summary">Display color calibration using KCAL</string>
+<string name="kcal_enabled_title">Enable KCAL</string>
+<string name="kcal_enabled_summary">Turn on display calibration using KCAL</string>
+<string name="kcal_red">Red</string>
+<string name="kcal_green">Green</string>
+<string name="kcal_blue">Blue</string>
+<string name="kcal_saturation">Saturation</string>
+<string name="kcal_contrast">Contrast</string>
+<string name="kcal_reset">Reset</string>
+<string name="kcal_color_temp">Color temperature (K)</string>
+
+<!-- Sweep2Sleep -->
+<string name="s2s_title">Sweep to sleep</string>
+<string name="s2s_vib_strength_title">Sweep2sleep vibration</string>
+<string name="s2s_summary">Configure Sweep2sleep</string>
+<string name="s2s_vibration_summary">Set Sweep2sleep vibration strength</string>
+
+<!-- vibration strength -->
+<string name="vib_strength_title">Vibration strength</string>
+<string name="vib_strength_summary">Adjust the Vibration Strength</string>
+
+<!-- package -->
+<string name="package_parts_name">XiaomiParts</string>
+<string name="package_parts_label">Advanced</string>
+<string name="package_parts_summary">Device specific Customizations</string>
+
+<!-- kernel profiles / spectrum -->
+<string name="kernel_profile_title">Kernel Profiles</string>
+<string name="kernel_profile_summary">Choose your kernel profile</string>
+
+<!-- swap Hardware Buttons -->
+<string name="hw_buttons_title">Hardware Buttons</string>
+<string name="swap_hw_buttons_title">Swap Hardware buttons</string>
+<string name="swap_hw_buttons_summary">Swap recents and back buttons</string>
+
+<!-- usb fastcharge -->
+<string name="usb_fastcharge_title">USB Fastcharge</string>
+<string name="fastcharge_title">Enable USB Fastcharge</string>
+<string name="fastcharge_summary">Enable to use fastcharge when connected to an Computer</string>
+
+</resources>
