@@ -325,7 +325,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.1-service-qti
 
- # Prebuilt modules
+# Prebuilt Kernel
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/Image.gz-dtb:kernel
+
+# Prebuilt modules
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/exfat.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/exfat.ko \
     $(LOCAL_PATH)/prebuilt/qca_cld3_wlan.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/qca_cld3_wlan.ko
@@ -338,7 +342,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/qti_whitelist.xml
-
 
 # QMI
 PRODUCT_PACKAGES += \
