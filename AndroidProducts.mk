@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 The Mokee Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,4 +13,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
  PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/mk_platina.mk
+    $(LOCAL_DIR)/lineage_platina.mk
