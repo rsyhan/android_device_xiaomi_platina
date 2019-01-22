@@ -34,3 +34,13 @@
 
 # Touchscreen
 /sys/devices/soc/c178000\.i2c/i2c-4/4-0020/input/input[0-9]+/wake_gesture                       u:object_r:sysfs_touchpanel:s0
+
+# Torch
+/sys/devices/soc/qpnp-flash-led-25/leds/led:torch_0/max_brightness          u:object_r:sysfs_torch:s0
+/sys/devices/soc/qpnp-flash-led-25/leds/led:torch_1/max_brightness          u:object_r:sysfs_torch:s0
+
+# Vibrator
+/sys/class/timed_output/vibrator/vtg_level            u:object_r:sysfs_vibrator:s0
+
+# Kcal
+/sys/devices/platform/kcal_ctrl.0/kcal              u:object_r:sysfs:s0
