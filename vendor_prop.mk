@@ -4,6 +4,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.xiaomi.sar_fusion=true \
     sys.paper_mode_max_level=32
 
+# DPI Setting
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=440
+
 # AD and sensor config
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.ad=1 \
@@ -18,7 +22,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Idle timeout, non-idle switch to idle time
 PRODUCT_PROPERTY_OVERRIDES += \
     sdm.idle_time=1100
-
 
 # System.prop for sdm660
 PRODUCT_PROPERTY_OVERRIDES += \
