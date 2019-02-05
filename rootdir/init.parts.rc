@@ -2,10 +2,6 @@ on post-fs
     chown system system /sys/class/timed_output/vibrator/vtg_level
 
 on boot
-    # Sweep2Sleep permissions
-    chown system system /sys/sweep2sleep/vib_strength
-    chown system system /sys/sweep2sleep/sweep2sleep
-
     # KCAL permissions
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_enable
@@ -23,5 +19,11 @@ on boot
     chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_val
 
     # Vibrator permissions
-    chown root system /sys/class/timed_output/vibrator/vtg_level
-    chmod 0660 /sys/class/timed_output/vibrator/vtg_level
+    chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level
+    chown system system /sys/devices/virtual/timed_output/vibrator/vtg_level
+
+    # XiaomiParts
+    chown system system /sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/max_brightness
+    chown system system /sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_1/max_brightness
+    chmod 0660 /sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/max_brightness
+    chmod 0660 /sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_1/max_brightness

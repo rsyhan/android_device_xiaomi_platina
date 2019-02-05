@@ -13,3 +13,7 @@ sys.fake_bs_flag1                   u:object_r:system_radio_prop:s0
 # Thermal engine
 persist.sys.thermal.                u:object_r:thermal_prop:s0
 sys.thermal.                        u:object_r:thermal_prop:s0
+
+# Camera HAL3
+persist.camera.HAL3.enable          u:object_r:camera_prop:s0
+persist.camera.eis.enable           u:object_r:camera_prop:s0
