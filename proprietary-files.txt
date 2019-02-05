@@ -64,6 +64,7 @@ vendor/lib64/libaptXHD_encoder.so|c4ad4d6d7615f7df3ea1a4be5c6dae8a8c8ee8b1
 # Audio
 vendor/bin/audioflacapp
 vendor/bin/capture.sh
+vendor/etc/audio.bsd
 vendor/firmware/dbmd4_va_fw.bin
 vendor/firmware/tfa98xx_aac.cnt
 vendor/firmware/tfa98xx_goer.cnt
@@ -83,6 +84,9 @@ vendor/lib/libdrc.so
 vendor/lib/libqtigef.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/libtinycompress_vendor.so
+vendor/lib/libqcbor.so
+vendor/lib/libnwa.so
+vendor/lib/libsse.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
@@ -99,6 +103,9 @@ vendor/lib64/libaudioparsers.so
 vendor/lib64/libaudioroute_ext.so
 vendor/lib64/libqtigef.so
 vendor/lib64/libtinycompress_vendor.so
+vendor/lib64/libqcbor.so
+vendor/lib64/libnwa.so
+vendor/lib64/libsse.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcvirt.so
@@ -113,7 +120,6 @@ vendor/etc/acdbdata/Forte/Forte_Hdmi_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Headset_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp
-
 
 # Bluetooth
 vendor/bin/btnvtool
@@ -2048,8 +2054,11 @@ vendor/lib64/libtzdrmgenprov.so
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
 vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/libhdcpsrm.so
+vendor/lib/libcpion.so
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
+vendor/lib64/libcpion.so
 
 # ESE-Powermanager
 vendor/bin/hw/vendor.qti.esepowermanager@1.0-service
