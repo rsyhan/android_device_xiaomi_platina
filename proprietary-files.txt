@@ -2059,6 +2059,7 @@ vendor/lib/libcpion.so
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libcpion.so
+vendor/lib64/libhdcpsrm.so
 
 # ESE-Powermanager
 vendor/bin/hw/vendor.qti.esepowermanager@1.0-service
