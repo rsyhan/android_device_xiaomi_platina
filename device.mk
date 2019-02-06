@@ -476,3 +476,8 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     XiaomiParts \
     KCAL
+
+#QTI performance
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
