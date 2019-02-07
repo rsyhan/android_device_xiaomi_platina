@@ -475,7 +475,7 @@ PRODUCT_BOOT_JARS += \
 # XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts \
-    KCAL
+    KCal
 
 #QTI performance
 PRODUCT_BOOT_JARS += \

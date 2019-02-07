@@ -1,5 +1,5 @@
 LOCAL_PATH := $(call my-dir)
-ifeq ($(BOARD_VENDOR_PLATFORM),xiaomi-sdm660)
+ifeq ($(TARGET_DEVICE),$(filter $(TARGET_DEVICE),platina))
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
