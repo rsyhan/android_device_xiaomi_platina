@@ -43,8 +43,8 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String PREF_HEADSET = "dirac_headset_pref";
     private static final String PREF_PRESET = "dirac_preset_pref";
 
-    private static final String HAL3_SYSTEM_PROPERTY = "persist.camera.HAL3.enabled";
-    private static final String EIS_SYSTEM_PROPERTY = "persist.camera.eis.enable";
+    private static final String HAL3_SYSTEM_PROPERTY = "persist.vendor.camera.HAL3.enabled";
+    private static final String EIS_SYSTEM_PROPERTY = "persist.vendor.camera.eis.enable";
 
     private final static String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom,spmi/" + "" +
             "spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/max_brightness";

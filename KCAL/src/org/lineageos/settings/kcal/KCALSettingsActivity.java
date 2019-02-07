@@ -18,60 +18,27 @@ package org.lineageos.settings.kcal;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-public class KCALSettingsActivity extends Activity {
+public class KCalSettingsActivity extends Activity {
 
-    private KCALSettings mKCALSettingsFragment;
-    private static Context mContext;
+    static KCalSettings mKCalSettingsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mContext = this.getApplicationContext();
-
         Fragment fragment = getFragmentManager().findFragmentById(android.R.id.content);
         if (fragment == null) {
-            mKCALSettingsFragment = new KCALSettings();
+            mKCalSettingsFragment = new KCalSettings();
             getFragmentManager().beginTransaction()
-                    .add(android.R.id.content, mKCALSettingsFragment)
+                    .add(android.R.id.content, mKCalSettingsFragment)
                     .commit();
         } else {
-            mKCALSettingsFragment = (KCALSettings) fragment;
-        }
-    }
-
-    static Context getContext() {
-        return mContext;
-    }
-
-    private void reset() {
-        mKCALSettingsFragment.mSetOnBoot.setChecked(Utils.SETONBOOT_DEFAULT);
-        mKCALSettingsFragment.mRed.setValue(Utils.RED_DEFAULT);
-        mKCALSettingsFragment.mRed.refresh(Utils.RED_DEFAULT);
-        mKCALSettingsFragment.mGreen.setValue(Utils.GREEN_DEFAULT);
-        mKCALSettingsFragment.mGreen.refresh(Utils.GREEN_DEFAULT);
-        mKCALSettingsFragment.mBlue.setValue(Utils.BLUE_DEFAULT);
-        mKCALSettingsFragment.mBlue.refresh(Utils.BLUE_DEFAULT);
-        mKCALSettingsFragment.mMin.setValue(Utils.MINIMUM_DEFAULT);
-        mKCALSettingsFragment.mMin.refresh(Utils.MINIMUM_DEFAULT);
-        mKCALSettingsFragment.mSaturation.setValue(Utils.SATURATION_DEFAULT);
-        mKCALSettingsFragment.mSaturation.refresh(Utils.SATURATION_DEFAULT);
-        mKCALSettingsFragment.mValue.setValue(Utils.VALUE_DEFAULT);
-        mKCALSettingsFragment.mValue.refresh(Utils.VALUE_DEFAULT);
-        mKCALSettingsFragment.mContrast.setValue(Utils.CONTRAST_DEFAULT);
-        mKCALSettingsFragment.mContrast.refresh(Utils.CONTRAST_DEFAULT);
-        mKCALSettingsFragment.mHue.setValue(Utils.HUE_DEFAULT);
-        mKCALSettingsFragment.mHue.refresh(Utils.HUE_DEFAULT);
-
-        if (!mKCALSettingsFragment.mEnabled.isChecked()) {
-            mKCALSettingsFragment.mEnabled.setTitle(R.string.kcal_disabled);
-            mKCALSettingsFragment.prefState(false);
+            mKCalSettingsFragment = (KCalSettings) fragment;
         }
     }
 
@@ -79,11 +46,28 @@ public class KCALSettingsActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-		            onBackPressed();
+                finish();
                 return true;
 
             case R.id.action_reset:
-                reset();
+                mKCalSettingsFragment.applyValues(Utils.RED_DEFAULT + " " +
+                        Utils.GREEN_DEFAULT + " " +
+                        Utils.BLUE_DEFAULT + " " +
+                        Utils.MINIMUM_DEFAULT + " " +
+                        Utils.SATURATION_DEFAULT + " " +
+                        Utils.VALUE_DEFAULT + " " +
+                        Utils.CONTRAST_DEFAULT + " " +
+                        Utils.HUE_DEFAULT);
+
+                mKCalSettingsFragment.mSetOnBoot.setChecked(Utils.SETONBOOT_DEFAULT);
+                if (!mKCalSettingsFragment.mEnabled.isChecked()) {
+                    mKCalSettingsFragment.mEnabled.setTitle(R.string.kcal_disabled);
+                    mKCalSettingsFragment.prefState(false);
+                }
+                return true;
+
+            case R.id.action_preset:
+                mKCalSettingsFragment.mPresets.show(getFragmentManager(), "KCal: PresetDialog");
                 return true;
 
             default:

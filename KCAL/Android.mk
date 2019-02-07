@@ -1,5 +1,5 @@
 LOCAL_PATH := $(call my-dir)
-ifeq ($(TARGET_DEVICE),$(filter $(TARGET_DEVICE),platina))
+ifeq ($(BOARD_VENDOR_PLATFORM),xiaomi-sdm660)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
@@ -12,7 +12,7 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-support-v4
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
-LOCAL_PACKAGE_NAME := KCAL
+LOCAL_PACKAGE_NAME := KCal
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_PRIVATE_PLATFORM_APIS := true
@@ -21,9 +21,9 @@ LOCAL_USE_AAPT2 := true
 
 package_resource_overlays := $(strip \
     $(wildcard $(foreach dir, $(PRODUCT_PACKAGE_OVERLAYS), \
-      $(addprefix $(dir)/, packages/apps/KCAL/res))) \
+      $(addprefix $(dir)/, packages/apps/KCal/res))) \
     $(wildcard $(foreach dir, $(DEVICE_PACKAGE_OVERLAYS), \
-      $(addprefix $(dir)/, packages/apps/KCAL/res))))
+      $(addprefix $(dir)/, packages/apps/KCal/res))))
 
 LOCAL_RESOURCE_DIR := $(package_resource_overlays) $(LOCAL_RESOURCE_DIR)
 
