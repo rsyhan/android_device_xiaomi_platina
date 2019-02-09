@@ -338,6 +338,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.dynamic_sar=true
 
+# WhatsApp HAL1
+PRODUCT_PROPERTY_OVERRIDES += \
+    camera.hal1.packagelist=com.whatsapp
+    
 # Spectrum Kernel Profiles Support
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.spectrum.profile=0
