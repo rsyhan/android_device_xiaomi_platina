@@ -9,6 +9,3 @@ type thermal_prop, property_type;
 
 # Spectrum Kernel Profiles Support
 type spectrum_prop, property_type;
-
-# XiaomiParts HAL3 EIS
-type camera_prop, property_type;
