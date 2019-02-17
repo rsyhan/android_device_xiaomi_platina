@@ -59,6 +59,9 @@ sys.thermal.                        u:object_r:thermal_prop:s0
 persist.vendor.camera.HAL3.          u:object_r:camera_prop:s0
 persist.vendor.camera.eis.           u:object_r:camera_prop:s0
 
+# Spectrum Kernel Profiles Support
+persist.spectrum.profile             u:object_r:spectrum_prop:s0
+
 # vendor_default_prop
 fpc_kpi                             u:object_r:vendor_default_prop:s0
 gpu.stats.debug.level               u:object_r:vendor_default_prop:s0

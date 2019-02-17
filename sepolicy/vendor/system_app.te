@@ -13,6 +13,9 @@ allow system_app sysfs_torch:dir search;
 # XiaomiParts HAL3 EIS
 allow system_app camera_prop:property_service set;
 
+# Spectrum Kernel Profiles Support
+allow system_app spectrum_prop:property_service set;
+
 # Allow ConfigPanel to work
 allow system_app sysfs_sectouch:dir search;
 allow system_app sysfs_sectouch:file rw_file_perms;
