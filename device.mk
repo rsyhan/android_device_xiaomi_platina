@@ -472,8 +472,3 @@ PRODUCT_COPY_FILES += \
 # XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts
-
-# QTI performance
-PRODUCT_BOOT_JARS += \
-    QPerformance \
-    UxPerformance

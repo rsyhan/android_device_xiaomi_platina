@@ -148,6 +148,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # System property for maximum number of HFP client connections
 PRODUCT_PROPERTY_OVERRIDES += \
     bt.max.hfpclient.connections=1
+
 # Force disable Bluetooth AAC by default
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.bt.a2dp.aac_disable=true
@@ -325,7 +326,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bservice_enable=true
 
-
 # System property for displayfeature hidl
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.displayfeature_hidl=true
@@ -337,15 +337,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Set SAR feature
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.dynamic_sar=true
-
-# QTI Performance
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.enable_prefetch=1 \
-    vendor.iop.enable_uxe=1 \
-    vendor.iop.enable_prefetch_ofr=1 \
-    vendor.perf.iop_v3.enable=1 \
-    ro.vendor.at_library=libqti-at.so \
-    persist.vendor.qti.games.gt.prof=1
 
 # Spectrum Kernel Profiles Support
 PRODUCT_PROPERTY_OVERRIDES += \
