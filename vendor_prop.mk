@@ -307,7 +307,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # HAL1 apps list
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner
+    vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner,com.instagram.android
 
 # Set cutoff voltage to 3400mV
 PRODUCT_PROPERTY_OVERRIDES += \
