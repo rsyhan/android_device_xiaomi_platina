@@ -246,9 +246,6 @@ BOARD_VNDK_VERSION := current
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
-# Use mke2fs to create ext4 images
-TARGET_USES_MKE2FS := true
-
 # Vendor init
 TARGET_INIT_VENDOR_LIB := libinit_platina
 TARGET_RECOVERY_DEVICE_MODULES := libinit_platina
