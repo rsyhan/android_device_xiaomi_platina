@@ -37,9 +37,6 @@
          Note that a physical cutout should be configured in pixels for the best results. -->
 	<string translatable="false" name="config_mainBuiltInDisplayCutout">M -160,0 L -160,81 L 160,81 L 160,0 Z</string>
 
-    <!-- the padding on the start of the statusbar -->
-    <dimen name="status_bar_padding_start">6dp</dimen>
-
-    <!-- the padding on the end of the statusbar -->
-    <dimen name="status_bar_padding_end">6dp</dimen>
+    <!-- Statusbar Rounded corner padding -->
+    <dimen name="rounded_corner_content_padding">6dp</dimen>
 </resources>
