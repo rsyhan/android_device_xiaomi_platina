@@ -38,5 +38,6 @@
 	<string translatable="false" name="config_mainBuiltInDisplayCutout">M -160,0 L -160,81 L 160,81 L 160,0 Z</string>
 
     <!-- Statusbar Rounded corner padding -->
-    <dimen name="rounded_corner_content_padding">6dp</dimen>
+    <dimen name="rounded_corner_content_padding">12dp</dimen>
+    <dimen name="status_bar_edge_ignore">12dp</dimen>
 </resources>
