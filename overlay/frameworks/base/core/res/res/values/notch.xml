@@ -38,6 +38,18 @@
 	<string translatable="false" name="config_mainBuiltInDisplayCutout">M -160,0 L -160,81 L 160,81 L 160,0 Z</string>
 
     <!-- Statusbar Rounded corner padding -->
-    <dimen name="rounded_corner_content_padding">12dp</dimen>
-    <dimen name="status_bar_edge_ignore">12dp</dimen>
+    <dimen name="rounded_corner_radius">14dp</dimen>
+    <dimen name="rounded_corner_content_padding">8dp</dimen>
+
+    <!-- the padding on the start of the statusbar -->
+    <dimen name="status_bar_padding_start">11dp</dimen>
+
+    <!-- the padding on the end of the statusbar -->
+    <dimen name="status_bar_padding_end">11dp</dimen>
+
+    <!-- Margin on the left side of the carrier text on Keyguard -->
+    <dimen name="keyguard_carrier_text_margin">20dp</dimen>
+
+    <!-- Margin on the right side of the system icon group on Keyguard. -->
+    <dimen name="system_icons_keyguard_padding_end">11dp</dimen>
 </resources>
