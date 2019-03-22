@@ -416,7 +416,8 @@ PRODUCT_PACKAGES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
-    telephony-ext
+    telephony-ext \
+    qti-telephony-common
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
@@ -480,5 +481,12 @@ PRODUCT_PACKAGES += \
 
 # XiaomiParts
 PRODUCT_PACKAGES += \
-    XiaomiParts \
-    KCal
+    XiaomiParts
+
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libaacwrapper \
+    libnl
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon

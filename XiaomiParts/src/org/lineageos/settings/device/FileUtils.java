@@ -63,6 +63,20 @@ class FileUtils {
         }
     }
 
+    static void setValue(String path, String value) {
+        if (path == null) {
+            return;
+        }
+        try {
+            FileOutputStream fos = new FileOutputStream(new File(path));
+            fos.write(value.getBytes());
+            fos.flush();
+            fos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     static void setProp(String prop, boolean value) {
         if (value) {
             SystemProperties.set(prop, "1");
@@ -75,8 +89,8 @@ class FileUtils {
         return SystemProperties.getBoolean(prop, defaultValue);
     }
 
-    static void  setStringProp(String prop, String value) {
-            SystemProperties.set(prop, value);
+    static void setStringProp(String prop, String value) {
+        SystemProperties.set(prop, value);
     }
 
     static String getStringProp(String prop, String defaultValue) {
