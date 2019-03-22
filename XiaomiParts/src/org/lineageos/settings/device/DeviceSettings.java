@@ -48,13 +48,15 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String PREF_ENABLE_DIRAC = "dirac_enabled";
     private static final String PREF_HEADSET = "dirac_headset_pref";
     private static final String PREF_PRESET = "dirac_preset_pref";
-    private static final String HAL3_SYSTEM_PROPERTY = "persist.camera.HAL3.enabled";
+    private static final String HAL3_SYSTEM_PROPERTY = "persist.vendor.camera.HAL3.enabled";
     private static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
     private final static String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
             "spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/max_brightness";
     private final static String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
             "spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_1/max_brightness";
-    private final static String VIBRATION_STRENGTH_PATH = "/sys/devices/virtual/timed_output/vibrator/vtg_level";
+    // rsyhan modify
+    // From https://github.com/Grarak/KernelAdiutor/blob/master/app/src/main/java/com/grarak/kerneladiutor/utils/kernel/misc/Vibration.java#L56
+    private final static String VIBRATION_STRENGTH_PATH = "/sys/devices/virtual/timed_output/vibrator/vmax_mv";
     private static final String DEVICE_DOZE_PACKAGE_NAME = "org.lineageos.settings.doze";
     private SecureSettingSwitchPreference mEnableHAL3;
     private SecureSettingSwitchPreference mEnableFpAction;

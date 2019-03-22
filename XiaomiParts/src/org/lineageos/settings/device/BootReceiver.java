@@ -32,7 +32,7 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
             "spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_1/" +
             "max_brightness";
     private final String VIBRATION_STRENGTH_PATH = "/sys/devices/virtual/timed_output/vibrator" +
-            "/vtg_level";
+            "/vmax_mv";
 
     public void onReceive(Context context, Intent intent) {
 
