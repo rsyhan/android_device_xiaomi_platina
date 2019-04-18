@@ -334,15 +334,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.1-service-qti
 
-# Prebuilt Kernel
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/Image.gz-dtb:kernel
-
-# Prebuilt modules
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/exfat.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/exfat.ko \
-    $(LOCAL_PATH)/prebuilt/qca_cld3_wlan.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/qca_cld3_wlan.ko
-
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -373,8 +364,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.target.rc \
-    init.parts.rc \
-    init.spectrum.rc \
+    init.rsyhan.rc \
     ueventd.qcom.rc \
     fstab.qcom
 
