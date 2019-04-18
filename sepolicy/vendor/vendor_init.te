@@ -19,3 +19,4 @@ allow vendor_init vendor_camera_prop:property_service { set };
 allow vendor_init bluetooth_prop:property_service { set };
 allow vendor_init overlay_prop:property_service { set };
 allow vendor_init bservice_prop:property_service { set };
+allow vendor_init spectrum_prop:property_service set;
