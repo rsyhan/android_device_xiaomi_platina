@@ -1752,16 +1752,8 @@ case "$target" in
                     echo -n enable > $mode
                 done
 
-                #if the kernel version >=4.9,use the schedutil governor
-                KernelVersionStr=`cat /proc/sys/kernel/osrelease`
-                KernelVersionS=${KernelVersionStr:2:2}
-                KernelVersionA=${KernelVersionStr:0:1}
-                KernelVersionB=${KernelVersionS%.*}
-                if [ $KernelVersionA -ge 4 ] && [ $KernelVersionB -ge 9 ]; then
+                # Let's Enable EAS schedutil on LuxuryKernel
                     8953_sched_dcvs_eas
-                else
-                    8953_sched_dcvs_hmp
-                fi
                 echo 652800 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 
                 # Bring up all cores online
@@ -2422,20 +2414,14 @@ case "$target" in
             # online CPU4
             echo 1 > /sys/devices/system/cpu/cpu4/online
             # configure governor settings for big cluster
-            echo "interactive" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-            echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_sched_load
-            echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_migration_notif
-            echo "19000 1401600:39000" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
-            echo 90 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
-            echo 20000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
-            echo 1401600 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
-            echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy
-            echo "85 1401600:90 2150400:95" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
-            echo 39000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
-            echo 59000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
-            echo 1113600 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-            echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/ignore_hispeed_on_notif
-            echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/fast_ramp_down
+            # EAS schedutil
+            echo 1 > /sys/devices/system/cpu/cpu4/online
+            echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+            echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/rate_limit_us
+            #set the hispeed_freq
+            echo 768000 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
+            #default value for hispeed_load is 90, for 8937 it should be 85
+            echo 85 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_load
 
             # bring all cores online
             echo 1 > /sys/devices/system/cpu/cpu0/online
