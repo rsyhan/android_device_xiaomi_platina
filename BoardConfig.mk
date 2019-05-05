@@ -65,6 +65,9 @@ TARGET_KERNEL_CONFIG := platina-perf_defconfig
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_USE_SDCLANG := true
 
+# QCOM Power
+ENABLE_SCHEDBOOST := true
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
@@ -154,7 +157,7 @@ VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # DT2W
-#TARGET_TAP_TO_WAKE_NODE := "/sys/devices/soc/c178000.i2c/i2c-4/4-0038/fts_gesture_mode"
+TARGET_TAP_TO_WAKE_NODE := "/dev/input/event2"
 
 # EXFAT
 TARGET_EXFAT_DRIVER := exfat
