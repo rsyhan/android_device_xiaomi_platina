@@ -4,10 +4,9 @@ EXTRA_VENDOR_LIBRARIES_32 := \
     libaudioclient \
     libaudiomanager \
     libbinder \
-    libbufferhubqueue \
     libcamera_client \
     libft2 \
-    libgui \
+    libgui.vendor \
     libharfbuzz_ng \
     libheif \
     libicui18n \
@@ -16,7 +15,6 @@ EXTRA_VENDOR_LIBRARIES_32 := \
     libmediaextractor \
     libmediametrics \
     libminikin \
-    libpdx_default_transport \
     libsonivox
 
 define define-vndk-lib
