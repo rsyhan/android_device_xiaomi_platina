@@ -2358,6 +2358,14 @@ vendor/bin/mlipayd@1.1
 vendor/lib64/libmlipay@1.1.so
 
 # Perf
+-framework/QPerformance.jar
+-framework/UxPerformance.jar
+lib/libqti_performance.so
+lib/vendor.qti.hardware.perf@1.0.so
+lib/libqti-perfd-client_system.so
+lib64/libqti_performance.so
+lib64/vendor.qti.hardware.perf@1.0.so
+lib64/libqti-perfd-client_system.so
 vendor/bin/energy-awareness
 vendor/bin/msm_irqbalance
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
@@ -2375,6 +2383,20 @@ vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/libqti-utils.so
 vendor/lib64/vendor.qti.hardware.perf@1.0.so
+
+# IOP
+lib/vendor.qti.hardware.iop@1.0.so
+lib/vendor.qti.hardware.iop@2.0.so
+lib64/vendor.qti.hardware.iop@1.0.so
+lib64/vendor.qti.hardware.iop@2.0.so
+vendor/lib/vendor.qti.hardware.iop@2.0.so
+vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so
+vendor/lib/libqti-iopd-client.so
+vendor/lib/vendor.qti.hardware.iop@1.0.so
+vendor/lib64/vendor.qti.hardware.iop@2.0.so
+vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so
+vendor/lib64/libqti-iopd-client.so
+vendor/lib64/vendor.qti.hardware.iop@1.0.so
 
 # Peripheral manager
 vendor/bin/pm-proxy

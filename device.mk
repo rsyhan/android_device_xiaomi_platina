@@ -337,6 +337,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.panel_info.sh
 
+# Perf
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service.sdm660-libperfmgr
