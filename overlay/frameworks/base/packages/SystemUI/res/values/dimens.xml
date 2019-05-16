@@ -17,8 +17,8 @@
 */
 -->
 <resources>
-    <dimen name="rounded_corner_content_padding">10dp</dimen>
-
+    <dimen name="rounded_corner_radius">14dp</dimen>
+    <dimen name="rounded_corner_content_padding">8dp</dimen>
     <!-- the padding on the start of the statusbar -->
     <dimen name="status_bar_padding_start">11dp</dimen>
 
