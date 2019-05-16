@@ -41,7 +41,6 @@
     <string name="spectrum_dialogTitle">Choose your Performance settings</string>
 
     <!-- Values for Spectrum Presets -->
-    <string name="spectrum_stock">Stock</string>
     <string name="spectrum_performance">Performance</string>
     <string name="spectrum_battery">Battery</string>
     <string name="spectrum_gaming">Gaming</string>
@@ -117,6 +116,10 @@
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
 
+    <!-- Audio amplification -->
+    <string name="headphone_gain">Headphone gain</string>
+    <string name="microphone_gain">Microphone gain</string>
+
     <!-- kcal -->
     <string name="advanced_settings_kcal">Display Color Calibration</string>
     <string name="cat_colormanagement">Color Settings</string>
@@ -133,6 +136,7 @@
     <string name="value">Value</string>
     <string name="contrast">Contrast</string>
     <string name="hue">Hue</string>
+    <string name="grayscale">Grayscale Display</string>
 
     <string name="presets_dialog_title">Select Preset</string>
     <!-- Presets -->
