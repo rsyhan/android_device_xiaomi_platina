@@ -1,5 +1,5 @@
 <!--
-  ~ Copyright (C) 2018 The Android Open Source Project
+  ~ Copyright (C) 2019 The Android Open Source Project
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -26,8 +26,8 @@
     <bool name="config_maskMainBuiltInDisplayCutout">true</bool>
 
     <!-- Height of the status bar -->
-    <dimen name="status_bar_height_portrait">28dp</dimen>
-    <dimen name="status_bar_height_landscape">28dp</dimen>
+    <dimen name="status_bar_height_portrait">89px</dimen>
+    <dimen name="status_bar_height_landscape">24dp</dimen>
     <dimen name="rounded_corner_radius_top">7dp</dimen>
 
     <!-- Height of area above QQS where battery/time go (equal to status bar height if > 48dp) -->
