@@ -20,7 +20,6 @@
 # Mlipay
 /(vendor|system/vendor)/bin/mlipayd                 u:object_r:hal_mlipay_default_exec:s0
 
-
 # Readmac
 /(vendor|system/vendor)/bin/readmac                 u:object_r:readmac_exec:s0
 
@@ -32,8 +31,8 @@
 /data/decrypt\.txt                                  u:object_r:decrypt_file:s0
 /data/thermal(/.*)?                                 u:object_r:thermal_data_file:s0
 
-# Touchscreen
-/sys/devices/soc/c178000\.i2c/i2c-4/4-0020/input/input[0-9]+/wake_gesture                       u:object_r:sysfs_touchpanel:s0
+# DT2W
+/proc/touchpanel/wake_gesture                       u:object_r:sysfs_tap_to_wake:s0
 
 # Vibrator
 /sys/devices/virtual/timed_output/vibrator/vmax_mv            u:object_r:sysfs_vibrator:s0

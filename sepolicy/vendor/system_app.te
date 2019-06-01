@@ -1,3 +1,14 @@
++#============= system_app ==============
+allow system_app proc_pagetypeinfo:file { getattr open read };
+allow system_app sysfs:file { getattr open write };
+allow system_app sysfs_leds:dir search;
+allow system_app sysfs_leds:file { getattr open write };
+allow system_app sysfs_zram:dir search;
+allow system_app sysfs_zram:file read;
+
+allow system_app spectrum_prop:property_service set;
+get_prop(system_app, spectrum_prop);
+
 allow system_app wificond:binder call;
 
 allow system_app netd:dir { getattr search read };
@@ -20,10 +31,6 @@ allow system_app sysfs_torch:dir search;
 # Vibrator
 allow system_app sysfs_vibrator:file rw_file_perms;
 allow system_app sysfs_vibrator:dir search;
-
-# KCAL
-# allow system_app sysfs:dir search;
-# allow system_app sysfs:file rw_file_perms; 
 
 # XiaomiParts Camera2 API
 allow system_app camera_prop:property_service set;
