@@ -1,4 +1,5 @@
 +#============= system_app ==============
+allow system_app sysfs_zram:file open;
 allow system_app proc_pagetypeinfo:file { getattr open read };
 allow system_app sysfs:file { getattr open write };
 allow system_app sysfs_leds:dir search;
