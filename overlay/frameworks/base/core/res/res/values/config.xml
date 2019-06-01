@@ -507,10 +507,13 @@
 	<string-array name="config_deviceKeyHandlerClasses" translatable="false">
 		<item>org.lineageos.settings.device.KeyHandler</item>
 	</string-array>
-     
-    <!-- Smart charge sysfs node and value for suspend/resume charging-->
-    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
-    <string name="config_SmartChargingSupspendValue" translatable="false">1</string>
-    <string name="config_SmartChargingResumeValue" translatable="false">0</string>
+
+     <!-- Smart charge sysfs node and value for suspend/resume charging-->
+     <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
+     <string name="config_SmartChargingSupspendValue" translatable="false">1</string>
+     <string name="config_SmartChargingResumeValue" translatable="false">0</string>
+
+     <!-- We don't have outdated QtiTelephony -->
+     <bool name="config_oldQtiTelephony">false</bool>
 
 </resources>
