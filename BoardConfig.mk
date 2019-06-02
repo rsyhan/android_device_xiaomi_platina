@@ -66,7 +66,6 @@ KERNEL_TOOLCHAIN := prebuilts/gcc/linux-x86/aarch64/aarch64-elf-gcc/bin
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_USE_SDCLANG := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
