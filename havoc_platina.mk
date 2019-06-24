@@ -22,10 +22,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Inherit from platina device
 $(call inherit-product, device/xiaomi/platina/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common HavocOS stuff.
+$(call inherit-product, vendor/havoc/config/common.mk)
 
-PRODUCT_NAME := lineage_platina
+PRODUCT_NAME := havoc_platina
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := platina
 PRODUCT_MANUFACTURER := Xiaomi
@@ -40,3 +40,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="platina-user 9 PKQ1.181007.001 9.5.23 release-keys"
 
 TARGET_VENDOR := Xiaomi
+
+HAVOC_BUILD_TYPE=Official
+
+# I am official
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.havoc.maintainer=rsyhan
