@@ -30,7 +30,6 @@ import init.batteryd.rc
 
 import init.offline.log.rc
 import init.mishow.ctl.rc
-import init.rsyhan.rc
 
 on early-init
     mkdir /firmware 0771 system system
@@ -38,15 +37,6 @@ on early-init
     mkdir /dsp 0771 media media
 
 on init
-    mkdir /dev/logfs 0771 shell shell
-    write /dev/stune/foreground/schedtune.sched_boost_no_override 1
-    write /dev/stune/top-app/schedtune.sched_boost_no_override 1
-    write /dev/stune/schedtune.colocate 0
-    write /dev/stune/background/schedtune.colocate 0
-    write /dev/stune/system-background/schedtune.colocate 0
-    write /dev/stune/foreground/schedtune.colocate 0
-    write /dev/stune/top-app/schedtune.colocate 1
-# DBMDX character device
     chown media media /dev/dbmdx-1
     chmod 0770 /dev/dbmdx-1
 
@@ -141,12 +131,12 @@ on boot
     chown system system /proc/tp_selftest
     chown system system /sys/devices/virtual/graphics/fb0/msm_fb_dispparam
     chown system system /sys/class/thermal/thermal_message/sconfig
-
+    
     # DT2W
     chown system system /proc/touchpanel/wake_gesture
     chmod 0660 /proc/touchpanel/wake_gesture
 
-    # KCAL
+    # Platina Settings
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_cont
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_enable
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_hue
@@ -171,6 +161,10 @@ on boot
 
    chown wifi wifi /sys/module/wlan/parameters/fwpath
 
+on post-fs
+    chown system system /sys/class/timed_output/vibrator/vmax_mv
+    chmod 660 /sys/class/timed_output/vibrator/vmax_mv
+
 #USB controller configuration
     setprop vendor.usb.rndis.func.name "rndis_bam"
     setprop vendor.usb.rmnet.func.name "rmnet_bam"
@@ -178,10 +172,6 @@ on boot
     setprop vendor.usb.dpl.inst.name "dpl"
     write /sys/module/usb_f_qcrndis/parameters/rndis_dl_max_xfer_size 15916
     setprop sys.usb.configfs 1
-
-on post-fs
-    chown system system /sys/class/timed_output/vibrator/vmax_mv
-    chmod 660 /sys/class/timed_output/vibrator/vmax_mv
 
 #Peripheral manager
 service vendor.per_mgr /system/vendor/bin/pm-service
