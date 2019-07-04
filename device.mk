@@ -22,7 +22,6 @@
 #
 
 $(call inherit-product, vendor/xiaomi/platina/platina-vendor.mk)
-$(call inherit-product, vendor/xiaomi/MiuiCamera/config.mk)
 
 # Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
@@ -289,14 +288,6 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.platina
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # Media
 PRODUCT_COPY_FILES += \

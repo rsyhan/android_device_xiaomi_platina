@@ -55,10 +55,14 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/platina
-TARGET_KERNEL_CONFIG := platina_user_defconfig
+TARGET_KERNEL_CONFIG := acrux_defconfig
+
+# Build Kernel via GCC 9
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-elf-
+KERNEL_TOOLCHAIN := prebuilts/gcc/linux-x86/aarch64/aarch64-elf-gcc/bin
+
 # TARGET_KERNEL_CLANG_COMPILE := true
 
 # QCOM
@@ -236,6 +240,7 @@ BOARD_SECCOMP_POLICY := $(DEVICE_PATH)/seccomp
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
