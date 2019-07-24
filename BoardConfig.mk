@@ -58,8 +58,12 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/platina
-TARGET_KERNEL_CONFIG := platina_user_defconfig
 # TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CONFIG := acrux_defconfig
+
+# Build Kernel via GCC 9
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-elf-
+KERNEL_TOOLCHAIN := prebuilts/gcc/linux-x86/aarch64/aarch64-elf-gcc/bin
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
