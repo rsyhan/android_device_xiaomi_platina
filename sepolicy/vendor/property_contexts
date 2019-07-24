@@ -43,7 +43,7 @@ persist.data.netmgr.wl.timeout      u:object_r:vendor_default_prop:s0
 persist.data.netmgrd.qos.enable     u:object_r:vendor_default_prop:s0
 persist.data.netmgrd.qos.hybrid     u:object_r:vendor_default_prop:s0
 persist.data.profile_update         u:object_r:vendor_default_prop:s0
-persist.data.target.msm8998         u:object_r:vendor_default_prop:s0
+persist.data.target.sdm660          u:object_r:vendor_default_prop:s0
 persist.data.tcpackprio.enable      u:object_r:vendor_default_prop:s0
 persist.data.wda.enable             u:object_r:vendor_default_prop:s0
 persist.net.logmask                 u:object_r:vendor_default_prop:s0
@@ -59,3 +59,4 @@ vendor.powerhal.init		       u:object_r:power_prop:s0
 
 persist.sys.diag.max.size              u:object_r:diag_prop:s0
 persist.vendor.oem.dump                u:object_r:diag_prop:s0
+
